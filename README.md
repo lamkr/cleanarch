@@ -1,1 +1,26 @@
 # cleanarch
+
+A new Flutter package project.
+
+## Getting Started
+
+This project is a starting point for a Dart
+[package](https://flutter.dev/developing-packages/),
+a library module containing code that can be shared easily across
+multiple Flutter or Dart projects.
+
+For help getting started with Flutter, view our 
+[online documentation](https://flutter.dev/docs), which offers tutorials, 
+samples, guidance on mobile development, and a full API reference.
+
+### To test:
+```
+$ dart run --enable-experiment=non-nullable test\applicationContext_configuration_test.dart
+$ dart test --enable-experiment=non-nullable test\applicationContext_configuration_test.dart
+$ flutter test --enable-experiment=non-nullable test\applicationContext_configuration_test.dart
+```
+
+### To analyze code:
+```
+$ dartanalyzer -v --enable-experiment=non-nullable <path>
+```
