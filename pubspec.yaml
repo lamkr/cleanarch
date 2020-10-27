@@ -24,7 +24,7 @@ dependencies:
   http: ^0.12.2
   #package_info: '>=0.4.3 <2.0.0'
   package_info:
-    path: ../plugins-master/packages/package_info
+    path: ../plugins/packages/package_info
 
 dev_dependencies:
   flutter_test:
