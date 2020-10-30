@@ -10,7 +10,6 @@ import 'package:cleanarch/src/configuration/IConfiguration.dart';
 import 'package:flutter/material.dart' show Locale;
 import 'package:flutter_test/flutter_test.dart';
 
-
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 

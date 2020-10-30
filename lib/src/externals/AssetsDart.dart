@@ -14,7 +14,11 @@ class AssetsDart implements IAssets
       filename += '.json';
     }
     var path = 'assets';
-    path += '/$filename';
+    // When runs unit tests, the current directory change to 'test' project folder.
+    if( Directory.current.path.replaceAll('\\','/').endsWith('/test') ) {
+      path = '../$path';
+    }
+    print(path);
     var content = await File(path).readAsString();
     return json.decode(content);
   }

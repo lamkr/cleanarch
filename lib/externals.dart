@@ -6,4 +6,3 @@ export 'src/externals/AssetConfiguration.dart';
 export 'src/externals/AssetsDart.dart';
 export 'src/externals/SimplyInjectorProvider.dart';
 
-

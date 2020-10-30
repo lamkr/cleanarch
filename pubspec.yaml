@@ -5,12 +5,8 @@ author: Luciano Bonifacio Rodrigues
 homepage: https://flutuate.io/
 
 environment:
-  sdk: '>=2.10.0-56.0.dev <3.0.0'
+  sdk: '>=2.11.0-242.0.dev <3.0.0'
   flutter: ">=1.17.0 <2.0.0"
-
-analyzer:
-  enable-experiment:
-    - non-nullable
 
 dependencies:
   flutter:
@@ -21,7 +17,7 @@ dependencies:
   intl: ^0.16.1  # ^0.17.0-nullsafety
   async: ^2.5.0-nullsafety.1
   simply_injector: ^1.0.0-nullsafety.4
-  http: ^0.12.2
+  http:  ^0.12.2
   #package_info: '>=0.4.3 <2.0.0'
   package_info:
     path: ../plugins/packages/package_info
@@ -46,8 +42,9 @@ flutter:
 #--------------------------------------------------------------------------------------------------------
 #
 # Testes unitários:
+# (--no-sound-null-safety evita o erro "Cannot run with sound null safety as one or more dependencies do not support null safety"):
 #
-#   flutter test --enable-experiment=non-nullable [path]
+#   flutter test --enable-experiment=non-nullable --no-sound-null-safety [path]
 #
 #   dart run --enable-experiment=non-nullable [path]
 #
@@ -57,7 +54,7 @@ flutter:
 #
 # Testes de integração:
 #
-# flutter run --enable-experiment=non-nullable test_driver\...\filename.dart
+# flutter run --enable-experiment=non-nullable [path]
 #
 #--------------------------------------------------------------------------------------------------------
 #

@@ -1,6 +1,4 @@
-/// Represents the validation of an attribute in a class.
-/// Validation is well succeeded if the attributes [memberName] and [errorMessage]
-/// are empty.
+/// Represents the validation result of an attribute in a class.
 class ValidationResult {
   final String memberName;
   final String errorMessage;
@@ -9,9 +7,11 @@ class ValidationResult {
 
   ValidationResult.success() : this('','');
 
-  bool get isSuccess => memberName.isEmpty && errorMessage.isEmpty;
+  /// Validation is well succeeded if [memberName] and [errorMessage] are empty.
+  bool get hasNotError => memberName.isEmpty && errorMessage.isEmpty;
 
-  bool get isError => !isSuccess;
+  /// Validation has error when [memberName] or [errorMessage] aren't empty.
+  bool get hasError => !hasNotError;
 
   @override
   bool operator ==(Object other) {
