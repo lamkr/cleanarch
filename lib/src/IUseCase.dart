@@ -1,4 +1,4 @@
-abstract class IUseCase<Param, Response>
+abstract class IUseCase<TParam, TResponse>
 {
-  Future<Response> run(Param param);
+  Future<TResponse> run(TParam param);
 }
