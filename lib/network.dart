@@ -1,4 +1,4 @@
 library cleanarch.network;
 
 export 'src/network/IHttpClientBuilder.dart';
-export 'src/network/IApi.dart';
+export 'src/network/Api.dart';
