@@ -1,19 +1,22 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:cleanarch/log.dart';
 import 'package:cleanarch/network.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 
-class Api {
-	final String host;
-	final String context;
+class Api
+{
+	@protected final String host;
+	@protected final String context;
+	@protected final ILogger logger;
 	final IHttpClientBuilder _clientBuilder;
 
-	Api(this.host, this.context, this._clientBuilder);
+	Api(this.host, this.context, this._clientBuilder, this.logger);
 
 	@protected
-	Uri _buildUrl([String endpoint = '']) {
+	Uri buildUrl([String endpoint = '']) {
 		if (endpoint.isEmpty) {
 			return Uri.parse(host);
 		}
@@ -30,7 +33,7 @@ class Api {
 		final client = _clientBuilder.buildClient();
 
 		try {
-			final url = _buildUrl(endpoint);
+			final url = buildUrl(endpoint);
 
 			final timeout = const Duration(seconds: 30);
 
@@ -55,7 +58,7 @@ class Api {
 		final client = _clientBuilder.buildClient();
 
 		try {
-			final url = _buildUrl(endpoint);
+			final url = buildUrl(endpoint);
 
 			final timeout = const Duration(seconds: 30);
 
